@@ -1,0 +1,79 @@
+<!DOCTYPE html>     <!--/*Default Visual Studio*/ -->
+<html lang="en">    <!--Apertura etiqueta HTML-->
+
+<head>      <!--Apertura del encabezado-->
+    <meta charset="UTF-8">      <!--Especifica el codificado de la página-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Diseñador Freelancer </title>       <!--Título del encabezado-->
+    <link rel="stylesheet" href="CSS/normalize.css">        <!--Le decimos a HTML que va a usar el código de Normalize como hoja de estilos e indicamos su ubicación-->
+    <link rel="preload" href="CSS/normalize.css as="style">        <!--Los preloads mejora el rendimiento del sitio web-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">       <!--Enlazamos la página con Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">      <!--Enlace que entrega Google Fonts-->
+    <link rel="preload" href="CSS/styles.css as="style">        <!--También hacemos un preload a nuestra hoja de estilos-->
+    <link href="CSS/styles.css" rel="stylesheet" text="text/css">     <!--Le indicamos la ubicación de nuestra hoja de estilos y la aplicamos-->
+</head>     <!--Cierre de la etiqueta del encabezado-->
+
+<body>      <!--Apertura de la etiqueto del cuerpo de la página-->
+    <header>      <!--Apertura de la etiqueta del título más importante de la página-->
+        <h1 class="titulo"> Derek Alexander Oliva Contreras <span> Freelancer </span> </h1>    <!--Colocamos el título y el span que hará que en CSS coloquemos selectores distintos-->   
+    </header>      <!--Cierre de la etiqueta del título-->
+    <div class="nav-bg">        <!--Se crea el div para crear un nuevo selector en CSS-->
+    <nav class="navegacion-principal contenedor">       <!--Inicio de la etiqueta nav para la barra de navegación-->
+        <a href="index.html"> Inicio </a>        <!--Enlace-->
+        <a href="sobremi.html"> Sobre Mí </a>      <!--Enlace-->
+        <a href="portafolio.html"> Portafolio </a>      <!--Enlace-->
+        <a href="contacto.html"> Contacto </a>      <!--Enlace-->
+    </nav>    <!--Cierre de la etiqueta para la navegación-->
+    </div>    <!--Cierre del div-->
+   
+    <section class="desarrollo-web">       <!--Apertura de la sección: Imagen, icono, ciudad y botón-->
+       <div class="contenido-dw">       <!--Colocamos un div para seleccionar en CSS todo lo de dentro-->
+        <h2> Diseño y Desarrollo Web </h2>      <!--Colocamos un heading 2-->
+        <p>        <!--Apertura de un párrafo-->
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="84" height="84" viewBox="0 0 24 24" stroke-width="2" stroke="#ffc107" fill="none" stroke-linecap="round" stroke-linejoin="round">    <!--El SVG es el código que nos da Tabler Icons-->
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <circle cx="12" cy="11" r="3" />
+                <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+              </svg>
+            CDMX, México </p>    <!--Ponemos un texto que acompañe al icono-->
+        <a class="boton" href="#contacto"> Contactar </a>     <!--Colocamos un botón con un texto y un enlace-->
+        </div>    <!--Cierre del div-->
+   </section>     <!--Cierre de la sección-->
+    
+   <main class="contenedor sombra">       <!--Especificamos el contenido principal de la página con la etiqueta main-->
+    <h2 id="contacto"> Contacto </h2>
+    <form class="formulario">
+        <fieldset>
+            <legend> Contáctame llenando el siguiente formulario </legend>
+            <div class="contenedor-campos">
+                <div class="campo">
+                    <label> Nombre </label> <input class="input" type="text" placeholder="Tu nombre">
+                </div>
+
+                <div class="campo">
+                    <label> Teléfono </label> <input class="input" type="tel" placeholder="Tu telefono">
+                </div>
+
+                <div class="campo">
+                    <label> Correo electrónico </label> <input class="input" type="email" placeholder="Tu correo">
+                </div>
+
+                <div class="campo">
+                    <label> Mensaje </label> <textarea class="input"></textarea>
+                </div>
+            </div>      <!--Cierre de la clase contenedor-campos-->
+
+            <div class="alinear-derecha flex">
+                <input class="boton w-100" type="submit" value="Enviar">
+            </div>
+        </fieldset>
+    </form>
+    </main>    
+
+   <footer class="footer">
+        <p> Todos los derechos reservados. Derek Alexander Oliva Contreras </p>
+   </footer>
+   
+</body>
+</html>

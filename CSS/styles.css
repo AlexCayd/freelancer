@@ -1,0 +1,269 @@
+/*Paleta de colores*/
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+}
+
+/*Globales*/
+html {
+    font-size: 62.5%;       /*Ayuda con los tamaños de todos los textos*/
+    box-sizing: border-box;     /*Código para evitar problemas con Box Model*/
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;        /*Unificamos el tamaño de los textos*/
+    font-family: 'Krub', sans-serif;        /*Importamos las fuentes de Google Fonts*/
+    background-image: linear-gradient(to top, #dfe9f3 0%, var(--blanco) 100%);      /*Colocamos el color de fondo degradado*/
+}
+
+.titulo span{  
+    font-size: 2rem;        /*Cambiamos el tamaño del texto Freelancer del título*/
+}
+
+.sombra{
+    box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);     /*Genera el efecto de cartel en el contenido*/
+    background-color: var(--blanco);
+    padding: 1rem;
+    border-radius: 1rem;        /*Bordea las esquinas*/
+}
+
+/*Headings*/
+h1{
+    font-size: 3.8rem; /* 1rem=10px */
+}
+
+h2{
+    font-size: 2.8rem; /* 1rem=10px */
+}
+
+h3{
+    font-size: 1.8rem; /* 1rem=10px */
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.servicios, .navegacion-principal, .formulario, .acercademi{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+/*Barra de Navegación*/
+.nav-bg{
+    background-color: var(--secundario);    /*Le colocamos el color azul a la barra de navegación*/
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;     /*Los elementos se alinean de izquierda a derecha*/
+}
+
+.navegacion-principal a{    /*Enlaces de la barra de navegación*/
+    display: block;     /*Se cambia el display para acomodar los elementos*/
+    text-align: center;     /*Centramos los enlaces*/
+    color: var(--blanco);
+    text-decoration: none;      /*Quitamos el subrayado por defecto*/
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;      /*Establecemos un margen*/
+}
+
+.navegacion-principal a:hover{      /*El hover es el evento al seleccionar un enlace*/
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+/*Imagen, icono, ciudad y botón*/
+.contenedor{
+    max-width: 95rem;      /*Indica el tamaño del contenedor*/
+    margin: 0 auto;     /*Nos ayuda al margen*/
+}
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;     /*Se ajustan las dimensiones del boton*/
+    margin-top: 1rem;       /*Diferencia de espacios entre textos y el botón*/
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;      /*Transforma el texto a todo a mayúsculas*/
+    font-weight: bold;
+    border-radius: .5rem;       /*Indicamos qué tan redondeado será el botón*/
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+.desarrollo-web {
+    background-image: url(../imagenes/desarrollo-web.jpg);      /*Le indicamos a CSS la imagen*/
+    background-repeat: no-repeat;       /*La imagen no se repetitrá*/
+    background-size: cover;         /*La imagen cubrirá todo el ancho de la pantalla*/
+    height: 450px;          /*Indicamos el alto de la imagen dentro de la página*/
+    position: relative;     /*Nos permite colocar más específicamente cosas en el contenedor*/
+    margin-bottom: 2.5rem;        /*Agrega separación entre el contenedor y el contenido principal*/
+}
+
+.contenido-dw {
+    position: absolute;         /*Nos permite colocar más específicamente cosas en el contenedor*/
+    background-color: rgb(0, 0, 0, .7);     /*Le indicamos el color negro y el .7 es una transparencia*/
+    background-color: rgb(0 0 0 / 70%);     /*Sintaxis nueva para aplicar transparencias*/
+    width: 100%;        /*Aplica la sombra al 100% del ancho*/
+    height: 100%;       /*Aplica la sombra al 100% del alto*/
+    display: flex;      /*Nos habilita propiedades de distribución*/
+    flex-direction: column;     /*Organiza los elementos de arriba hacia abajo*/
+    align-items: center;       /*Alinea los elementos al centro horizontalmente*/
+    justify-content: center;    /*Alinea los elementos al centro verticalmente*/    
+}
+
+.contenido-dw h2, .contenido-dw p {
+    color: var(--blanco);       /*Le colocamos el color blanco al texto de la ciudad y al texto Diseño Web Freelancer*/
+}
+
+/*Servicios*/
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3{
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+.servicio p{
+    line-height: 2;         /*Agregamos un interlineado a los párrafos*/
+    text-align: center;
+}
+
+.servicio .iconos {
+    height: 15rem;      /*Alto del círculo*/
+    width: 15rem;       /*Ancho del círculo*/
+    background-color: var(--primario);
+    border-radius: 50%;     /*Convierte el cuadrado en círculo*/
+    display: flex;
+    justify-content: space-evenly;      /*Asigna espacio entre los iconos*/
+    align-items: center;
+}
+
+/*Formulario de contacto*/
+.formulario{
+    background-color: var(--gris);
+    width: min(60rem, 100%);       /*Asigna el valor más bajo entre los dos parámetros*/
+    margin: 0 auto;        /*Centramos el formulario*/
+    padding: 2.5rem;      /*Agregamos margen interno*/
+    border-radius: 1rem;        /*Redondeamos las esquinas*/
+}
+
+.formulario fieldset {
+    border: none;       /*Quita el borde por defecto*/
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;        /*Agregamos un espacio entre la leyenda y el primer input*/
+    color: var(--primario);
+}
+
+.campo{
+    margin-bottom: 1rem;        /*Agregamos espacio entre cada input*/
+}
+
+.campo label{
+    color: var(--blanco);       
+    font-weight: bold;
+    margin-bottom: .5rem;       /*Da espacio entre el nombre del campo y el input*/
+    display: block;         /*Hará que los inputs ocupen todo el espacio*/
+}
+
+.input{
+    width: 100%;
+    border: none;       /*Quitamos el borde de los inputs*/
+    padding: 1.5rem;        /*Modificamos el ancho de los inputs*/
+    border-radius: .5rem;       /*Redondear las esquinas de los inputs*/
+}
+
+/*Utilidades*/
+.w-100{
+    width: 100%;
+}
+.flex{
+    display: flex;
+}
+.alinear-derecha{
+    justify-content: flex-end;
+}
+
+/*Footer*/
+
+.footer{
+    text-align: center;
+}
+
+/*Media Queries*/
+@media (min-width: 768px){      /*Media Querie para tablets y celulares*/
+    .navegacion-principal{
+    flex-direction: row;        /*Muestra la barra de navegación de arriba hacia abajo*/
+    justify-content: space-between;         /*Coloca un espacio homogéneo entre los elementos*/
+   }
+   .boton {
+       width: auto;     /*El boton se muestra en todo el ancho de la página*/
+   }
+   .boton:hover{
+    cursor: pointer;
+   }
+   .servicios{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);      /*Asignamos 3 columnas y cada una ocupará una fracción (1/3) de la pantalla*/
+    column-gap: 1.5rem;     /*Asignamos un espacio entre cada columna*/
+   }
+   .w-100{
+       width: auto;
+   }
+   .contenedor-campos{
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       grid-template-rows: auto auto 20rem;
+       column-gap: 1rem;
+   }
+   .campo:nth-child(3), .campo:nth-child(4){
+       grid-column: 1/3;   
+   }
+}
+
+.imagen {
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+}
+
+.proyecto {
+    background-color: var(--secundario);
+    margin-bottom: 2rem;
+}
+
+.proyecto h3 {
+    color: var(--blanco);
+}
